@@ -1,0 +1,69 @@
+2023-08-30 15:24:23,945 - INFO - Bot: Yandex_Test [@Yandex_Test_Nshubenkov_bot]
+2023-08-30 15:24:24,045 - WARNING - Updates were skipped successfully.
+2023-08-30 15:24:24,045 - INFO - Start polling.
+2023-08-30 15:24:28,136 - INFO - Received message [ID:9] in chat [private:1357083150]
+2023-08-30 15:24:28,659 - INFO - Process update [ID:67553652]: [success] (in 523 ms)
+2023-08-30 15:38:29,870 - INFO - Received message [ID:11] in chat [private:1357083150]
+2023-08-30 15:38:30,745 - INFO - Process update [ID:67553653]: [success] (in 876 ms)
+2023-08-30 15:44:48,326 - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiohttp\client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiohttp\client.py", line 560, in _request
+    await resp.start(conn)
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiohttp\client_reqrep.py", line 899, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiohttp\streams.py", line 616, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiogram\bot\api.py", line 142, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2023-08-30 15:54:48,831 - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiohttp\client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiohttp\client.py", line 560, in _request
+    await resp.start(conn)
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiohttp\client_reqrep.py", line 899, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiohttp\streams.py", line 616, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\desig\PycharmProjects\pythonProject\venv\Lib\site-packages\aiogram\bot\api.py", line 142, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой

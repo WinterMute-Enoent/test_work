@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Saint-Petersburg",
+		"population": 200
+	},
+	{
+		"name": "Moscow",
+		"population": 100
+	},
+	{
+		"name": "Rostov",
+		"population": 500
+	}
+]
